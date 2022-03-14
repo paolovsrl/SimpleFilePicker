@@ -4,5 +4,8 @@
     <string name="go_parent_label">"⬆️ .."</string>
     <string name="folder_item">🗂 %1$s</string>
     <string name="file_item">📄 %1$s</string>
+    <string name="msg_ask_permission">In order to view the files on the phone, the app requires the permission to access storage.</string>
+    <string name="btn_label_grant_permissions">Grant permissions</string>
+    <string name="btn_label_select">select</string>
 
 </resources>

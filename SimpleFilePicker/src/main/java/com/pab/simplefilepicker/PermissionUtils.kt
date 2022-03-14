@@ -112,7 +112,9 @@ fun checkStoragePermissionApi30(activity: AppCompatActivity): Boolean {
 
 @RequiresApi(30)
 fun requestStoragePermissionApi30(activity: AppCompatActivity) {
-    val intent = Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
+    val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+    val uri = Uri.fromParts("package", activity.packageName, null)
+    intent.data = uri
 
     activity.startActivityForResult(intent, MANAGE_EXTERNAL_STORAGE_PERMISSION_REQUEST)
 }

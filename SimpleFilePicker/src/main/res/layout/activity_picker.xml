@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Explanation why we need the permissions"
+            android:text="@string/msg_ask_permission"
             app:layout_constraintBottom_toTopOf="@+id/picker_request_permission_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:text="Grant permissions"
+            android:text="@string/btn_label_grant_permissions"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,7 @@
             android:id="@+id/folder_picker_select_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="select"
+            android:text="@string/btn_label_select"
             android:layout_margin="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
