@@ -6,18 +6,18 @@ Usage:
 
 Add repository:
 
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+    dependencyResolutionManagement {
+        repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+            ...
+            maven {url "https://raw.githubusercontent.com/paolovsrl/mvn-repo-public/release"}
+        }
+    }
   
   
   Add dependency:
   
   	dependencies {
-	        implementation 'com.github.paolovsr:SimpleFilePicker:Tag'
+	        implementation 'com.android.lib:file-picker:1.0'
 	}
   
   

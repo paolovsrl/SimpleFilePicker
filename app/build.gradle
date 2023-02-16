@@ -39,5 +39,6 @@ dependencies {
     implementation "androidx.core:core-ktx:1.9.0"
     //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    //implementation 'com.android.lib:file-picker:1.0'
     implementation project(':SimpleFilePicker')
 }

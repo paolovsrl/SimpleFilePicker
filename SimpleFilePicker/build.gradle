@@ -11,8 +11,8 @@ android {
         minSdk 21
         targetSdk 33
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+       // testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -32,7 +32,7 @@ android {
     publishing {
         singleVariant('release') {
             // if you don't want sources/javadoc, remove these lines
-            withSourcesJar()
+           // withSourcesJar()
             withJavadocJar()
         }
     }
@@ -50,7 +50,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                groupId 'com.omsi.lib'
+                groupId 'com.android.lib'
                 artifactId 'file-picker'
                 version '1.0'
                 from components.getByName('release')
@@ -61,7 +61,7 @@ afterEvaluate {
             maven {
                 name = 'myRepo'
                 //url = layout.buildDirectory.dir("repo")
-                url = "D:\\AndroidStudioProjects\\OMSI\\repo"
+                url = "D:\\AndroidStudioProjects\\OMSI\\repo-public"
             }
         }
     }
