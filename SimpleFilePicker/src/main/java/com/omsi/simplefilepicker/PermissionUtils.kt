@@ -41,14 +41,6 @@ const val MANAGE_EXTERNAL_STORAGE_PERMISSION_REQUEST = 1
 const val READ_EXTERNAL_STORAGE_PERMISSION_REQUEST = 2
 
 
-fun getStoragePermissionName(): String {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        MANAGE_EXTERNAL_STORAGE_PERMISSION
-    } else {
-        Manifest.permission.READ_EXTERNAL_STORAGE
-    }
-}
-
 fun openPermissionSettings(activity: AppCompatActivity) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
         requestStoragePermissionApi30(activity)
@@ -122,14 +114,15 @@ fun requestStoragePermissionApi30(activity: AppCompatActivity) {
 @RequiresApi(19)
 fun checkStoragePermissionApi19(activity: AppCompatActivity): Boolean {
     val status =
-        ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE)
+        ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE) and
+                ContextCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)
 
     return status == PackageManager.PERMISSION_GRANTED
 }
 
 @RequiresApi(19)
 fun requestStoragePermissionApi19(activity: AppCompatActivity) {
-    val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+    val permissions = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     ActivityCompat.requestPermissions(
         activity,
         permissions,

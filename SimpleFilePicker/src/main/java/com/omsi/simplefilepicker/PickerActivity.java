@@ -1,4 +1,4 @@
-package com.pab.simplefilepicker;
+package com.omsi.simplefilepicker;
 
 import static com.omsi.fileprovidertest.FileUtilsKt.getFilesList;
 import static com.omsi.fileprovidertest.FileUtilsKt.renderItem;
@@ -21,6 +21,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.pab.simplefilepicker.R;
 
 import java.io.File;
 import java.util.ArrayList;

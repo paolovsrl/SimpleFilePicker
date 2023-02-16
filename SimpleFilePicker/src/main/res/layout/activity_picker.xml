@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pab.simplefilepicker.PickerActivity">
+    tools:context="com.pab.simplefilepicker.com.omsi.simplefilepicker.simplefilepicker.PickerActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/picker_request_permission_container"
